@@ -2,7 +2,7 @@
 
 A simple and educational implementation of the **Gomoku** game using the Python library **easyAI**.  
 This project demonstrates how **adversarial search algorithms** can be used to build a working game AI.
-
+![img.png](img.png)
 ---
 
 ## Project Overview
