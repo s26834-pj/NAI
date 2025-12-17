@@ -1,0 +1,32 @@
+=== Task 3: Fashion-MNIST (10 classes) ===
+Framework: TensorFlow/Keras (tf.keras)
+Model size: small
+epochs=10, batch_size=64, seed=42
+
+Train size: 60000, Test size: 10000
+Input shape: (28, 28, 1)
+
+None
+Accuracy (test): 0.9173
+              precision    recall  f1-score   support
+
+ T-shirt/top       0.88      0.84      0.86      1000
+     Trouser       0.99      0.98      0.99      1000
+    Pullover       0.85      0.89      0.87      1000
+       Dress       0.89      0.95      0.92      1000
+        Coat       0.87      0.87      0.87      1000
+      Sandal       0.99      0.99      0.99      1000
+       Shirt       0.78      0.74      0.76      1000
+     Sneaker       0.95      0.97      0.96      1000
+         Bag       0.98      0.98      0.98      1000
+  Ankle boot       0.98      0.96      0.97      1000
+
+    accuracy                           0.92     10000
+   macro avg       0.92      0.92      0.92     10000
+weighted avg       0.92      0.92      0.92     10000
+
+
+Saved confusion matrix to: outputs/plots/p3_confusion_matrix.png
+Saved training curve to: outputs/plots/p3_training_curve.png
+Log saved to: outputs/logs/p3_log.txt
+Done ✅

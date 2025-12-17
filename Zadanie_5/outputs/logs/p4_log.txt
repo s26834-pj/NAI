@@ -1,0 +1,69 @@
+=== p4.py (Fruits classification) ===
+Framework: TensorFlow / Keras (tf.keras)
+Dataset: Fruits-360 '3-body-problem' (Apples / Cherries / Tomatoes)
+seed=42, img_size=100, batch_size=32, epochs=6
+Classes (3): ['Apple', 'Cherry', 'Tomato']
+
+=== Model summary ===
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ rescaling (Rescaling)       (None, 100, 100, 3)       0         
+                                                                 
+ conv2d (Conv2D)             (None, 100, 100, 32)      896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 50, 50, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 50, 50, 64)        18496     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 25, 25, 64)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_2 (Conv2D)           (None, 25, 25, 128)       73856     
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 12, 12, 128)      0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 18432)             0         
+                                                                 
+ dense (Dense)               (None, 128)               2359424   
+                                                                 
+ dropout (Dropout)           (None, 128)               0         
+                                                                 
+ dense_1 (Dense)             (None, 3)                 387       
+                                                                 
+=================================================================
+Total params: 2,453,059
+Trainable params: 2,453,059
+Non-trainable params: 0
+_________________________________________________________________
+
+=== Training ===
+
+=== Test evaluation ===
+Test accuracy: 0.7926
+
+Confusion matrix:
+[[5002    0  136]
+ [ 607 2205  606]
+ [ 436  752 2489]]
+
+Classification report:
+              precision    recall  f1-score   support
+
+       Apple       0.83      0.97      0.89      5138
+      Cherry       0.75      0.65      0.69      3418
+      Tomato       0.77      0.68      0.72      3677
+
+    accuracy                           0.79     12233
+   macro avg       0.78      0.77      0.77     12233
+weighted avg       0.79      0.79      0.79     12233
+
+
+Saved confusion matrix to: outputs/plots/p4_confusion_matrix.png
+Saved training curve to: outputs/plots/p4_training_curve.png
+
+Log saved to: outputs/logs/p4_log.txt
+Done 

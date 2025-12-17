@@ -1,0 +1,59 @@
+=== Step 1: cats_dataset.csv | Compare: DT vs SVM vs MLP (Keras) ===
+Data: data/cats_dataset.csv
+Seed: 42
+Test size: 0.2
+MLP params: epochs=40, batch=16, hidden_units=64, hidden_layers=2, dropout=0.1
+
+Records: 1000
+Class distribution (Gender):
+Gender
+Male      505
+Female    495
+
+=== Classic ML: Decision Tree ===
+Accuracy (DT): 0.5650
+              precision    recall  f1-score   support
+
+      Female       0.56      0.60      0.58        99
+        Male       0.57      0.53      0.55       101
+
+    accuracy                           0.56       200
+   macro avg       0.57      0.57      0.56       200
+weighted avg       0.57      0.56      0.56       200
+
+
+=== Classic ML: SVM (RBF) ===
+Accuracy (SVM): 0.5600
+              precision    recall  f1-score   support
+
+      Female       0.56      0.53      0.54        99
+        Male       0.56      0.59      0.58       101
+
+    accuracy                           0.56       200
+   macro avg       0.56      0.56      0.56       200
+weighted avg       0.56      0.56      0.56       200
+
+
+=== Neural network: MLP (TensorFlow/Keras) ===
+Training finished. Best val_accuracy: 0.4938
+
+Accuracy (MLP): 0.4950
+              precision    recall  f1-score   support
+
+      Female       0.49      0.59      0.53        99
+        Male       0.50      0.41      0.45       101
+
+    accuracy                           0.49       200
+   macro avg       0.50      0.50      0.49       200
+weighted avg       0.50      0.49      0.49       200
+
+
+Saved confusion matrix to: outputs/plots/p1_confusion_matrix.png
+
+=== SUMMARY (Accuracy) ===
+Decision Tree: 0.5650
+SVM (RBF):     0.5600
+MLP (Keras):   0.4950
+
+Log saved to: outputs/logs/p1_log.txt
+Done 

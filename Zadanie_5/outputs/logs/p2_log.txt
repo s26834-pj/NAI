@@ -1,0 +1,48 @@
+=== Step 2: CIFAR-10 animals only | TensorFlow/Keras (tf.keras) ===
+Animal classes: ['bird', 'cat', 'deer', 'dog', 'frog', 'horse']
+epochs=12, batch_size=64, seed=42
+Train size (animals): 30000
+Test size  (animals): 6000
+
+=== Training CNN (small) ===
+None
+Accuracy (small): 0.6738
+              precision    recall  f1-score   support
+
+        bird       0.57      0.74      0.65      1000
+         cat       0.60      0.48      0.53      1000
+        deer       0.64      0.71      0.67      1000
+         dog       0.63      0.61      0.62      1000
+        frog       0.80      0.77      0.79      1000
+       horse       0.84      0.74      0.78      1000
+
+    accuracy                           0.67      6000
+   macro avg       0.68      0.67      0.67      6000
+weighted avg       0.68      0.67      0.67      6000
+
+Saved confusion matrix to: outputs/plots/p2_confusion_matrix_small.png
+
+=== Training CNN (large) ===
+None
+Accuracy (large): 0.7493
+              precision    recall  f1-score   support
+
+        bird       0.71      0.72      0.72      1000
+         cat       0.65      0.59      0.62      1000
+        deer       0.72      0.80      0.75      1000
+         dog       0.76      0.68      0.72      1000
+        frog       0.79      0.90      0.84      1000
+       horse       0.87      0.80      0.84      1000
+
+    accuracy                           0.75      6000
+   macro avg       0.75      0.75      0.75      6000
+weighted avg       0.75      0.75      0.75      6000
+
+Saved confusion matrix to: outputs/plots/p2_confusion_matrix_large.png
+
+=== SUMMARY (Accuracy) ===
+CNN small: 0.6738
+CNN large: 0.7493
+
+Log saved to: outputs/logs/p2_log.txt
+Done 
